@@ -1,11 +1,10 @@
 {
   "name": "makrut",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minimal functional logger for NodeJS",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha",
-    "lint": "eslint"
+    "lint": "eslint --ext .js,.cjs . src"
   },
   "repository": {
     "type": "git",
@@ -25,9 +24,7 @@
   "type": "module",
   "devDependencies": {
     "eslint": "^7.6.0",
-    "eslint-plugin-import": "^2.22.0"
-  },
-  "dependencies": {
+    "eslint-plugin-import": "^2.22.0",
     "eslint-config-airbnb-base": "^14.2.0"
   }
 }

@@ -7,7 +7,7 @@ const levels = Object.fromEntries(
 
 const noop = () => {};
 
-const makrut = (minLevel) => {
+const makrut = (minLevel = 'info') => {
   const logger = Object.fromEntries(
     Object.keys(levels).map((levelName, levelNumber) => [
       levelName,
@@ -22,13 +22,13 @@ const makrut = (minLevel) => {
     ]),
   );
 
-  Object.keys(logger).forEach((level) => {
-    const inspector = (message) => (object) => {
+  Object.keys(logger).forEach(level => {
+    const inspector = message => object => {
       logger[level](message, object);
       return object;
     };
 
-    logger[level].inspect = (messageOrObject) => (typeof messageOrObject === 'string'
+    logger[level].inspect = messageOrObject => (typeof messageOrObject === 'string'
       ? inspector(messageOrObject)
       : inspector('')(messageOrObject)
     );
