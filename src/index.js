@@ -7,7 +7,7 @@ const levels = Object.fromEntries(
 
 const noop = () => {};
 
-const makrut = minLevel => {
+const makrut = (minLevel = 'info') => {
   const logger = Object.fromEntries(
     Object.keys(levels).map((levelName, levelNumber) => [
       levelName,
