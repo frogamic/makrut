@@ -64,7 +64,7 @@ logger.info(message, data);
 logger.warn(message, data);
 logger.error(message, data);
 ```
-These are listed in increasing verbosity order, Makrut will only print messages that are equal or less verbose than the `level` you originally provided on initialisation. The corresponding function from `console` is used for each level, meaning that `logger.trace` will include the stacktrace of the calling context and `logger.error` will output to `stdout`.
+These are listed in increasing verbosity order, Makrut will only print messages that are equal or less verbose than the `level` you originally provided on initialisation. The corresponding function from `console` is used for each level, meaning that `logger.trace` will include the stacktrace of the calling context and `logger.error` will output to `stderr`.
 
 **Input:**
 
